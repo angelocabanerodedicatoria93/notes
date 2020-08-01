@@ -92,7 +92,7 @@ multitasking = writing, reading, speaking =
 eat                                       = 
 #############################################   7 hours 30 mins  18 - 01:30
 nap, meditate                20 minutes   = 
-bantay bata                               = 
+bantay bata                               = d
 programmer                                = 
 musician                                  = 
 translator                                = 
