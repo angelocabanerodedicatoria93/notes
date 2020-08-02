@@ -526,5 +526,154 @@ d
 Arch Linux Installation (2020) - YouTube
 ```
 
+## Arch Linux on a USB Stick - YouTube
 
+```sh
+localectl list-keymaps | grep CH
+  de_CH-latin1
+loadkeys de_CH-latin1
+ip a
+iwctl
+device list
+station wlan0 scan
+station wlan0 get-networks
+station wlan0 connect name
+exit
+```
+
+```sh
+pacman -Syy reflector
+reflector -c Switzerland -a 6 --sort rate --save /etc/pacman.d/mirrorlist
+pacman -Syy
+```
+
+```sh
+lsblk
+  sdb
+gdisk /dev/sdb
+n, enter, enter, +200M             /efi
+ef00
+n, enter, enter, enter, enter      /
+w, Yes
+lsblk
+  sdb
+    sdb1
+    sdb2
+mkfs.fat -F32 /dev/sdb1
+mkfs.ext4 -O "^has_journal" /dev/sdb2
+```
+
+##  Arch Linux July 2020 ISO Wi-Fi with iwd - YouTube d
+
+```sh
+iwctl
+device list
+  wlan0
+station wlan0 scan
+station wlan0 get-networks
+station wlan0 connect name
+exit
+ip a
+```
+
+## Install Arch Linux Walkthrough [NEW 2020] - YouTube
+
+```txt
+https://www.chrisatmachine.com/Linux/01-Arch-Linux-Install-UEFI/
+https://wiki.archlinux.org/index.php/Installation_guide
+https://balena.io/etcher/
+
+arch linux archiso x86_64 UEFI CD
+ls /sys/firmware/efi/efivars
+ping archlinux.org
+ip link
+wifi-menu
+```
+
+```sh
+timedatectl set-ntp true
+fdisk -l
+  /dev/vda1
+  /dev/vda2
+  /dev/vda3
+fdisk /dev/vda
+m, g
+n, enter, enter, +512M, yes, t, 1                 /boot
+n, enter, enter, +26G, yes, t, enter, l, 24       /root
+n, enter, enter, enter, yes, t, enter, l, 28      /home
+w
+```
+
+```sh
+mkfs.vfat /dev/vda1
+mkfs.ext4 /dev/vda2
+mkfs.ext4 /dev/vda3
+
+mount /dev/vda2 /mnt
+mkdir /mnt/boot
+mkdir /mnt/home
+mount /dev/vda1 /mnt/boot
+mount /dev/vda3 /mnt/home
+df
+  /dev/vda2         /mnt
+  /dev/vda1         /mnt/boot
+  /dev/vda3         /mnt/home
+
+
+pacstrap /mnt base base-devel linux linux-firmware vim dhcpcd
+genfstab -U /mnt >> /mnt/etc/fstab
+cat /mnt/etc/fstab
+  /
+  /boot
+  /home
+arch-chroot /mnt
+
+
+fallocate -l 6GB /swapfile
+chmod 600 /swapfile
+mkswap /swapfile
+swapon /swapfile
+vim /etc/fstab
+  /swapfile    none  swap  default 0 0
+
+
+ln -sf /usr/share/zoneinfo/America/New_York /etc/localtime
+hwclock --systohc
+vim /etc/locale.gen
+  en_US.UTF-8 UTF-8
+locale
+locale-gen
+
+vim /etc/locale.conf
+  LANG=en_US.UTF-8
+vim /etc/hostname
+  vm
+vim /etc/hosts
+  127.0.0.1 localhost
+  ::1       localhost
+  127.0.1.1 vm.localdomain vm
+
+
+passwd
+pacman -S grub efibootmgr os-prober
+grub-install --target=x86_64-efi --efi-directory=/boot --bootloader-id=GRUB
+grub-mkconfig -o /boot/grub/grub.cfg
+exit
+
+
+umount -a
+reboot
+```
+
+## Arch Linux Installation (2020) _ Full Guide - YouTube
+
+```
+```
+```
+```
+```
+```
+```
+```
+```
 

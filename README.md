@@ -70,7 +70,7 @@ I want to learn ( 1, 2, 3 hours or 30 minutes )
   investor                     = 
   ideas                        = 
   gamer                        = 
-  anime                        = k one piece 422 done    133 how to cook curry
+  anime                        = k one piece 434 done    133 how to cook curry
   expenses                     = 
   physicist                    = 
   mathematician                = 
