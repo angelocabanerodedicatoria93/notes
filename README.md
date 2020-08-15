@@ -54,8 +54,9 @@ stay calm under pressure & under stress
 ## DAILY ROUTINE
 
 ```txt
-I want to learn ( 1, 2, 3 hours or 30 minutes )
+I want to learn ( 20m, 1hr, 4hrs)
   holy books                   = 
+  physicist                    =           9.2
   programmer
     wordpress                  = 
     html, css, javascript      = 
@@ -70,7 +71,7 @@ I want to learn ( 1, 2, 3 hours or 30 minutes )
   investor                     = 
   ideas                        = 
   gamer                        = 
-  anime                        = k one piece 434 done    133 how to cook curry
+  anime                        = k one piece 438 done    133 how to cook curry
   expenses                     = 
   physicist                    = 
   mathematician                = 
@@ -92,7 +93,8 @@ multitasking = writing, reading, speaking =
 eat                                       = 
 #############################################   7 hours 30 mins  18 - 01:30
 nap, meditate                20 minutes   = 
-bantay bata                               = d
+bantay bata                               = 
+speaking                                  = d
 programmer                                = 
 musician                                  = 
 translator                                = 
@@ -162,5 +164,64 @@ I'm very sorry for the living things in this earth that humans eat and killed in
 22 x 5 = 110
 23 x 5 = 115
 24 x 5 = 120
+
+
+alacritty
+```
+
+```txt
+Richard Feynman
+  theoretical physicist
+
+  trigonometry, advanced algebra, infinite series, analytic geometry, and both differential and integral calculus
+  derivative, half-derivative, logarithm, sine, cosine and tangent
+
+  physics
+
+
+
+Albert Einstein
+  theoretical physicist
+
+  mathematics and physics
+
+
+
+Nikola Tesla
+  theoretical physicist
+  inventor
+  electrical engineer
+  mechanical engineer
+  futurist
+
+  engineering and physics
+
+
+
+Elon Musk
+  engineer
+  entrepreneur
+  industrial designer
+  philanthropist
+
+  economics
+  physics
+
+
+
+Warren Buffett
+  investor
+  entrepreneur
+  philanthropist
+
+  economics
+  business administration
+
+
+
+Benjamin Graham
+  investor
+  economist
+  professor
 ```
 
