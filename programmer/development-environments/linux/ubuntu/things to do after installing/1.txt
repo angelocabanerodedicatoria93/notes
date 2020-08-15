@@ -1,0 +1,22 @@
+https://www.fossmint.com/things-to-do-after-installing-ubuntu-18-04/
+
+1. Update Your System
+ sudo apt update && sudo apt upgrade
+
+2. Enable Additional Repositories
+ Software & Updates, Ubuntu Software and Other Software, check all
+ sudo apt install ubuntu-restricted-extras
+
+3. Disable Ubuntu Problem Reporting to Canonical
+ System Settings, Privacy, Problem Reporting, Manual
+
+4. Install Your Preferred Applications
+5. Enable Night Light
+6. Install GNOME Tweak Tool
+ sudo apt install gnome-tweak-tool
+7. Install Ubuntu Community Theme and Others
+8. Install TLP and Disable Automatic Suspend
+ sudo apt install tlp tlp-rdw
+ sudo tlp start
+9. Install GNOME Extensions
+10. Set Up Social Media Accounts

@@ -1,0 +1,22 @@
+show hidden startup applications
+ sudo sed -i "s/NoDisplay=true/NoDisplay=false/g" /etc/xdg/autostart/*.desktop
+ startup applications preferences
+
+install preload
+ preload (adaptive readahead daemon)
+
+change swappiness value
+ cat /prc/sys/vm/swappiness
+ 60
+
+ text editor
+ gksu gedit /etc/sysctl.conf
+  # Decrease swappiness value
+  vm.swappiness=10
+
+ cat /prc/sys/vm/swappiness
+ 10
+
+bugs can make ubuntu slow
+ gksu gedit
+  preferences, plugins, uncheck = file browser panel (easy file access from the side panel)

@@ -1,0 +1,5 @@
+https://linuxize.com/post/how-to-install-steam-on-ubuntu-18-04/
+
+sudo add-apt-repository multiverse
+sudo apt install steam
+steam

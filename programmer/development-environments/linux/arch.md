@@ -1,5 +1,12 @@
 # arch
 
+## https://wiki.archlinux.org/index.php/Installation_guide
+
+```txt
+```
+
+## Full Arch Linux Install (SAVAGE Edition!) - YouTube
+
 ```txt
 requirements
   ethernet
@@ -151,14 +158,11 @@ reboot
 
 root
 password
-
-d
-Full Arch Linux Install (SAVAGE Edition!) - YouTube
 ```
 
+## Arch Linux Installation Guide (2019) - YouTube d
 
-
-```sh
+```txt
 archlinux.org
   download
     bittorrent download
@@ -266,45 +270,52 @@ password
 
 ping google.com
 sudo pacman -S xorg
-
-
-d
-Arch Linux Installation Guide (2019) - YouTube
 ```
 
-```sh
+## Arch Linux Full Installation d
+
+```txt
 f12
 boot menu
-  usb hdd, enter
-arch linux archiso x86_64 uefi cd
+  usb, enter
+press nothing
 
 ip addr show
 wifi-menu
   choose wifi network, password
 ip a
+  172.16.250.184
 ping -c 5 www.learnlinux.tv
 
 nano /etc/pacman.d/mirrorlist
-  choose mirrors that is near to you
+  choose the 1st mirrors that is near to you
+  delete country that is far from you
 pacman -Syyy
 
 
 fdisk -l
 fdisk -l :more
+  /dev/nvme0n1p1
+  /dev/nvme0n1p2
 lsblk
   nvme0n1
     nvme0n1p1
     nvme0n1p2
+
+
 fdisk /dev/nvme0n1
   p, g, p
-  n, enter, enter, +500M, y, t, 1,       efi system
-  n, enter, enter,  +30G, y              /
-  n, enter, enter, enter                 home
+  n, enter, enter, +500M, y, t, L, 1,       efi system
+  n, enter, enter,  +30G, y                 /
+  n, enter, enter, enter                    home
   p
     /dev/nvme0n1p1   500M efi system
     /dev/nvme0n1p2    30G linux filesystem
     /dev/nvme0n1p3 446.5G linux filesystem
   w
+
+
+
 lsblk
   nvme0n1
     nvme0n1p1   500M
@@ -334,6 +345,8 @@ pacstrap -i /mnt base
 arch-chroot /mnt
 pacman -S linux linux-headers linux-lts linux-lts-headers
   enter, enter
+
+
 pacman -S nano
 pacman -S openssh base-devel
 systemctl enable sshd
@@ -354,8 +367,9 @@ passwd jay
 
 which sudo
   /usr/bin/sudo
-  if error
-  pacman -S sudo
+if error
+pacman -S sudo
+
 EDITOR=nano visudo
   %wheel ALL=(ALL) ALL
 
@@ -363,6 +377,7 @@ pacman -S grub efibootmgr dosfstools os-prober mtools
 mkdir /boot/EFI
 mount /dev/nvme0n1p1 /boot/EFI
 grub-install --target=x86_64-efi --bootloader-id=grub_uefi --recheck
+
 mkdir /boot/grub/locale
 cp /usr/share/locale/en\@quot/LC_MESSAGES/grub.mo /boot/grub/locale/en.mo
 grub-mkconfig -o /boot/grub/grub.cfg
@@ -380,8 +395,6 @@ pacman -S intel-ucode
 pacman -S xorg-server
 pacman -S mesa
 
-pacman -S nvidia nvidia-utils nvidia-lts
-pacman -S virtualbox-guest-utils xf86-video-vmware
 
 exit
 umount -a
@@ -389,19 +402,11 @@ poweroff
 
 remove the flash drive
 turn on and login
-
-d
-Arch Linux Full Installation Walkthrough - YouTube
 ```
 
+## Arch Linux Installation (2020) - YouTube
 
-
-
-
-
-
-```sh
-
+```txt
 download iso file and iso.sig
 
 gpg --keyserver-options auto-key-retrieve --verify Downloads/archlinux-2020.04.01-x86_64.iso.sig
@@ -520,10 +525,6 @@ sudo pacman -S pulseaudio pulseaudio-alsa xorg xorg-xinit xorg-server xfce4 ligh
 echo "exec startxfce4" > ~/.xinitrc
 sudo systemctl enable lightdm
 startx
-
-
-d
-Arch Linux Installation (2020) - YouTube
 ```
 
 ## Arch Linux on a USB Stick - YouTube
@@ -565,7 +566,9 @@ mkfs.ext4 -O "^has_journal" /dev/sdb2
 
 ##  Arch Linux July 2020 ISO Wi-Fi with iwd - YouTube d
 
-```sh
+```txt
+wifi-menu
+  command not found: wifi-menu
 iwctl
 device list
   wlan0
@@ -574,6 +577,7 @@ station wlan0 get-networks
 station wlan0 connect name
 exit
 ip a
+  192.168.1.151
 ```
 
 ## Install Arch Linux Walkthrough [NEW 2020] - YouTube
@@ -669,11 +673,301 @@ reboot
 
 ```
 ```
+
+## Fix your Terrible Hipster Distro when it Breaks (Arch Artix) - YouTube k
+
+```txt
+neomutt
+  liblua.so.5.3: cannot open
+pacman -Qs lua
+  lua 5.4.0-2
+ls /var/cache/pacman/pkg/
+ls /var/cache/pacman/pkg/lua
+  lua-5.3
+  lua-5.4
+sudo pacman -U /var/cache/pacman/pkg/lua-5.3.pkg.tar.xz
+  downgrading package lua 5.4 => 5.3
+
+neomutt
+sudo pacman -Su
+  lua-5.4
+
+sudo nvim /etc/pacman.conf
+  IgnorePkg = transmission-cli lua
+sudo pacman -Su
+  lua: ignoring package upgrade 5.3 => 5.4
+
+
+
+neomutt
+  liblua.so.5.3: cannot open
+yay -S neomutt-git
+  A
+neomutt
+  working
+yay neomutt
 ```
+
+## Arch Linux - What to do after installing (configuring and setup tutorial) [2020] - YouTube d
+
+```txt
+root
+systemctl start NetworkManager
+systemctl enable NetworkManager
+ping archlinux.org
+
+nmtui
+
+
+
+useradd -m -g wheel name
+passwd name
+
+
+
+visudo
+  %wheel ALL=(ALL) ALL
+
+
+
+pacman -S xorg-server xorg-xinit
+
+
+pacman -S lightdm
+pacman -S lightdm-gtk-greeter
+pacman -S lightdm-gtk-greeeter-settings
+systemctl enable lightdm
+systemctl list-unit-files --state=enabled
+
+
+
+pacman -S i3-gaps i3status i3lock dmenu
+pacman -S xfce4
+
+
+pacman -S alacritty
+pacman -S firefox
+pacman -S nautilus
+reboot
+
+
+cd .config/
+ls
+cd i3/
+ls
+vim config
 ```
+
+## 10 Things to do first in Arch Linux - YouTube
+
+```txt
+uname -r
+  4.10.1-1-ARCH
+sudo pacman -S linux-lts
+sudo pacman -S linux-lts-headers
+sudo grub-mkconfig -o /boot/grub/grub.cfg
+sudo reboot
+uname -r
+  4.9.13-1-lts
+sudo pacman -Rs linux
+
+
+
+sudo pacman -S intel-ucode
+sudo grub-mkconfig -o /boot/grub/grub.cfg
+sudo pacman -S linux-firmware
+
+
+
+sudo nano /etc/default//grub
+
+
+sudo pacman -S ufw
+sudo ufw enable
+sudo ufw status verbose
+sudo systemctl enable ufw.service
+sudo reboot
+sudo ufw status
+
+
+root
+ps -U vbox
+pacman -S rsync lsof ecryptfs-utils
+modprobe ecryptfs
+ecryptfs-migrate-home -u vbox
+exit
+vbox
+ls
+cat README.txt
+ecryptfs-mount-private
+ecryptfs-unwrap-passphrase
+ls .ecryptfs
+sudo nano /etc/pam.d/system-auth
+  auth     required pam_ecryptfs.so unwrap
+
+  password optional pam_ecryptfs.so
+
+  session  optional pam_ecryptfs.so unwrap
+sudo reboot
+
+
+
+Remove orphans
+sudo pacman -Rns $(pacman -Qtdq)
+
+
+sudo pacman-optimize
+
+
+sudo systemctl --failed
+
+
+sudo journalctl -p 3 -xb
+
+
+sudo rsync
 ```
-```
-```
-```
+
+## [1a] _ Arch Linux Base Install on UEFI - New Series - YouTube d
+
+```txt
+arch linux archiso x86_64 UEFI CD
+localectl list-keymaps | grep CH
+  de_CH-latin1
+loadkeys de_CH-latin1
+
+ip a
+wifi-menu
+
+timedatectl set-ntp true
+
+
+pacman -Syyy
+pacman -S reflector
+reflector -c Switzerland -a 6 --sort rate --save /etc/pacman.d/mirrorlist
+pacman -Syyy
+
+
+lsblk
+  vda
+fdisk /dev/vda
+g
+n, enter, enter, +200M, t, L, 1
+n, enter, enter, enter, w
+
+
+lsblk
+  vda1   200M
+  vda2 149.8G
+mkfs.fat -F32 /dev/vda1
+mkfs.ext4 /dev/vda2
+
+
+
+lsblk
+  vda1   200M
+  vda2 149.8G
+
+mount /dev/vda2 /mnt
+
+mkdir /mnt/boot
+mount /dev/vda1 /mnt/boot
+
+
+lsblk
+  vda1   200M /mnt/boot
+  vda2 149.8G /mnt
+pacstrap /mnt base linux linux-firmware intel-ucode amd-ucode nano
+
+
+genfstab -U /mnt >> /mnt/etc/fstab
+cat /mnt/etc/fstab
+  /dev/vda2   /     ext4
+  /dev/vda1   /boot vfat
+
+
+arch-chroot /mnt
+fallocate -l 2GB /swapfile
+chmod 600 /swapfile
+mkswap /swapfile
+swapon /swapfile
+vim /etc/fstab
+  /swapfile none swap defaults 0 0
+
+
+timedatectl list-timezones | grep Zurich
+  Europe/Zurich
+ln -sf /usr/share/zoneinfo/Europe/Zurich /etc/localtime
+hwclock --systohc
+
+
+vim /etc/locale.gen
+  en_US.UTF-8 UTF-8
+locale-gen
+echo "LANG=en_US.UTF-8" >> /etc/locale.conf
+echo "KEYMAP=de_CH-latin1" >> /etc/vconsole.conf
+
+
+vim /etc/hostname
+  archuefi
+vim /etc/hosts
+  127.0.0.1  localhost
+  ::1        localhost
+  127.0.1.1  archuefi.localdomain  archuefi
+
+
+passwd
+
+
+pacman -S grub efibootmgr networkmanager network-manager-applet wireless_tools wpa_supplicant dialog os-prober mtools dosfstools base-devel linux-headers bluez bluez-utils cups git pulseaudio pulseaudio-bluetooth pulseaudio-alsa pulseaudio-equalizer pulseaudio-jack xdg-utils xdg-user-dirs
+
+
+lsblk
+  vda1 200M   /boot
+  vda2 149.8G /
+grub-install --target=x86_64-efi --efi-directory=/boot --bootloader-id=GRUB
+grub-mkconfig -o /boot/grub/grub.cfg
+
+
+systemctl enable NetworkManager
+systemctl enable bluetooth
+systemctl enable org.cups.cupsd
+
+
+useradd -mG wheel ermanno
+passwd
+EDITOR=nano visudodo
+  %wheel ALL=(ALL) ALL
+exit
+
+umount -a
+reboot
+
+
+Arch Linux
+ermanno
+
+
+sudo pacman -S openssh
+sudo systemctl start sshd
+sudo systemctl enable sshd
+ip a
+ssh ermanno@192.168.122.127
+ip a
+nmtui
+  activate connection
+
+skip this step if you have intel graphics
+sudo pacman -S xf86-video-qxl
+sudo pacman -S xf86-video-intel    (not recommended to install)
+sudo pacman -S xf86-video-amdgpu
+sudo pacman -S nvidia nvidia-utils
+
+
+
+git clone https://aur.archlinux.org/yay.git
+cd yay/
+makepkg -si PKGBUILD
+yay -S
 ```
 

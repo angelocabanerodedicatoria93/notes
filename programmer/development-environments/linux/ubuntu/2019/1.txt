@@ -1,0 +1,7 @@
+https://itsfoss.com/4-best-download-managers-for-linux/
+
+uninstall
+https://www.wikihow.com/Uninstall-Ubuntu-Software
+
+root folder
+https://askubuntu.com/questions/422950/root-folder-access-via-gui

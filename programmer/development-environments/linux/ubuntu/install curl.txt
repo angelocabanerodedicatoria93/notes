@@ -1,0 +1,9 @@
+curl --version
+
+sudo apt update && sudo apt upgrade
+
+sudo apt install curl
+curl --version
+
+
+https://www.cyberciti.biz/faq/how-to-install-curl-command-on-a-ubuntu-linux/

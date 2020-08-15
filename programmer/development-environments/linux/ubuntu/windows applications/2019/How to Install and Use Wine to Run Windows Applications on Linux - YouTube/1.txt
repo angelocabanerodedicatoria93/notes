@@ -1,0 +1,6 @@
+mkdir Wine
+cd Wine/
+ll
+WINEARCH=win32 WINEPREFIX=/home/titus/Wine/MediaMonkey winecfg
+ ok
+ll 

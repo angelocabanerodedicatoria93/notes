@@ -1,0 +1,44 @@
+https://www.fossmint.com/speed-up-ubuntu-linux/
+
+1. limit automatic startup applications
+ startup applications
+2. reduce grub load time
+ sudo gedit /etc/default/grub
+  GRUB_TIMEOUT=10 to GRUB_TIMEOUT=2
+ sudo update-grub
+3. reduce overheating with tlp
+ sudo add-apt-repository ppa:linrunner/tlp
+ sudo apt-get update
+ sudo apt-get install tlp tlp-rdw
+ sudo tlp start
+4. set software updates mirror
+ software & update, ubuntu software, select best server
+
+5. use apt-fast instead of apt-get
+ sudo add-apt-repository ppa:apt-fast/stable 
+ sudo apt-get update
+ sudo apt-get install apt-fast
+
+6. Clean Ubuntu
+ sudo apt-get clean
+ sudo apt-get autoremove
+
+7. Enable Proprietary Drivers
+ software & update, additional drivers, install/apply changes
+
+8. Install Preload
+ sudo apt-get install preload 
+
+9. Use a Speedy Desktop Environment
+10. Remove Package Translation for Apt-Get
+ sudo apt-get update
+
+ sudo gedit /etc/apt/apt.conf.d/00aptitude
+  Acquire::Languages "none";
+
+11. Lower Compiz Effects
+ sudo apt-get install compizconfig-settings-manager
+
+12. Clear Search Results
+ System Setting, Security & Privacy
+

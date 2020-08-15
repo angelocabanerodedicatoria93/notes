@@ -1,0 +1,12 @@
+sudo apt install wine
+
+https://lutris.net/downloads
+sudo add-apt-repository ppa:lutris-team/lutris
+sudo apt-get update
+sudo apt-get install lutris
+
+https://lutris.net/
+ register, world of warcraft = add to library
+
+lutris
+ login,

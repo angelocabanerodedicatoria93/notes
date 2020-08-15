@@ -1,0 +1,20 @@
+check for updates
+ sudo apt update
+ sudo apt upgrade 
+
+install media codecs
+ apt://ubuntu-restricted-extras
+
+tweak w/ gnome tweaks
+
+enable minimize to dock
+
+extend that gnome
+ extensions
+
+theme
+ communitheme
+
+snap or flatpak
+ 
+hidpi

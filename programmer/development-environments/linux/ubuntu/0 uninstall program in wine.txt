@@ -1,0 +1,3 @@
+wine uninstaller
+
+https://askubuntu.com/questions/101064/uninstall-a-program-installed-with-wine

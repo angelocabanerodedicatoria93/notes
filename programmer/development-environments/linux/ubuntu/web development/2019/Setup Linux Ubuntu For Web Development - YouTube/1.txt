@@ -1,0 +1,42 @@
+google chrome
+
+terminator
+ sudo apt-get update
+ sudo apt-get install terminator
+
+atom
+ sudo add-apt-repository pp:webupd8team/atom
+ sudo apt-get update
+ sudo apt-get install atom
+
+curl
+ sudo apt-get install curl
+ curl -sL https://deb.nodesource.com/setup_6.x | sudo -E bash -
+
+nodejs
+ sudo apt-get install nodejs
+ nodejs -v
+ npm -v
+
+
+LAMP stack
+ sudo apt-get install apache2
+ sudo apt-get insatll php7.0 libapache2-mod-php7.0 
+ sudo apt-get install mysql-server
+ sudo /etc/init.d/apache2 restart
+ cd /var/www/html
+ sudo touch index.php
+ sudo nano index.php
+  <?php echo 'HELLO'; ?>
+  sudo rm index.html
+
+FTP
+ sudo apt-get install filezilla
+
+gimp like photoshop
+ sudo add-apt-repository ppa:otto-kesselgulasch/gimp
+ sudo apt-get update
+ sudo apt-get install gimp
+
+unity
+ sudo apt-get install unity-tweak-tool

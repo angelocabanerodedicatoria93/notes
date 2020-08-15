@@ -1,0 +1,7 @@
+sudo apt-get install tlp tlp-rdw
+sudo tlp start
+
+sudo tlp-stat -s
+sudo tlp-stat -c
+sudo tlp-stat -b
+sudo apt-get remove tlp

@@ -1,0 +1,4 @@
+sudo apt-get install ubuntu-restricted-extras
+sudo apt install ubuntu-restricted-extras
+
+remember to use the tab key to select between the options and then hit enter to confirm your choice.

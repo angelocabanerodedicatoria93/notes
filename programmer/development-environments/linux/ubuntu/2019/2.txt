@@ -1,0 +1,4 @@
+https://en.wikipedia.org/wiki/APT_(software)
+https://www.computerhope.com/unix/sudo.htm
+https://www.computerhope.com/jargon/r/root.htm
+https://www.computerhope.com/jargon/l/linux.htm

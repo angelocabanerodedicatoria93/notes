@@ -1,0 +1,36 @@
+speed up development environment 
+
+curl k
+node k
+
+lamp
+ linux  k
+ apache k 
+ mysql  k
+ php    k
+
+
+
+git, github k
+ssh         k
+
+gitflow 
+git workflow
+git structure
+
+ftp
+
+editorconfig
+
+
+
+
+wordpress with git
+netlify
+
+token
+api
+
+
+ssl 
+jamstack 

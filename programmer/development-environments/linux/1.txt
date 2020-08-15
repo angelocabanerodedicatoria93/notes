@@ -1,0 +1,22 @@
+Linux is nothing but a UNIX clone which is written Linus Torvalds from scratch with the help of some hackers across the globe.
+
+Unix and Unix-like operating systems are a family of computer operating systems that derive from the original Unix System from Bell Labs which can be traced back to 1965. 
+
+Linux is the most popular variant and there comes in a number of different distributions.
+
+Unix is a family of multitasking, portable, multi-user computer operating systems, which also have time-sharing configurations.
+
+Unix systems use a centralized OS kernel which is responsible for managing the entire system.
+
+The programming interface, file abstraction, built-in networking and persistent background processing called daemons are the other features and capabilities that are supported by a Unix OS.
+
+modern Linux system you're most likely to be using a shell called bash
+
+Linux is a sort-of-descendent of Unix. The core part of Linux is designed to behave similarly to a Unix system, 
+such that most of the old shells and other text-based programs run on it quite happily. 
+
+"terminal", "command", "prompt" or "shell" = synonym
+
+
+commands
+https://tutorials.ubuntu.com/tutorial/command-line-for-beginners#8

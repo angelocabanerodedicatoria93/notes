@@ -1,0 +1,49 @@
+software & updates
+ ubuntu software, download from, other, select best server, choose server
+
+ enable additional repositories for more software
+ other software
+  canonical partners = check
+
+ installing additional drivers
+  additional drivers
+   using nvidia binary driver - version 340.106, apply changes
+ 
+
+make sure your system updated
+ sudo apt update
+ sudo apt upgrade
+
+install multimedia codecs and extras 
+ sudo apt install ubuntu-restricted-extras openjdk-8-jre unrar rar libdvd-pkg
+
+enable minimize on click for the ubuntu dock
+ gsettings set org.gnome.shell.extensions.dash-to-dock click-action 'minimize'
+
+enable night light for better sleep
+
+unlock hidden settings with gnome tweak tool
+ sudo apt install gnome-tweak-tool
+
+explore gnome extensions
+ sudo apt install chrome-gnome-shell
+
+install a better ubuntu theme
+ sudo snap install communitheme
+
+enable and start firewall(ufw) to enhance security
+ sudo apt install gufw
+ firewall, status = on
+
+install favorite applications
+ sudo snap install spotify simplenote vlc mailspring gimp corebird telegram-desktop 
+ sudo snap install slack --classic  
+ sudo snap install skype --classic
+
+install gsconnect (for android user)
+
+install tlp for improve battery life and reduce overheating
+ 
+install bleachbit system cleaner
+ sudo apt install bleachbit
+ 
