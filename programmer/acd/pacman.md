@@ -90,22 +90,19 @@ df -h
 ```txt
 su
 exit
-sudo pacman -Syu
+sudo pacman -Syu                   sync and upgrade
 
 sudo pacman -S guvcview            install package
 sudo pacman -R guvcview            remove package
 sudo pacman -Rs guvcview           remove package and dependencies
 
 
-
 sudo pacman -Ss guvcview           search repository package
 sudo pacman -Qs firefox            search for installed package
 
 
-
 pacman -Qdt                        list of packages that are no longer needed
-sudo pacman -Rns $(pacman -Qtdq)   remove packages
-
+sudo pacman -Rns $(pacman -Qtdq)   remove unused packages
 
 
 sudo pacman -Syu
@@ -118,3 +115,63 @@ pacman -Qdt
 sudo pacman -Rns $(pacman -Qtdq)
 man pacman
 ```
+
+## Getting Started with Arch Linux 06 - Managing Packages with pacman - YouTube d
+
+```txt
+man pacman
+
+pacman -Ss chromium
+sudo pacman -S chromium
+sudo pacman -R chromium
+
+sudo pacman -Syu
+https://www.archlnux.org
+  manual intervention
+
+
+cat /etc/pacman.d/mirrorlist
+
+https://www.archlnux.org/mirrorlist/
+  choose your country
+  use mirror status = check
+  generate list
+  copy the generated mirrors and paste on mirrorlist
+
+cd /etc/pacman.d
+ls
+  mirrorlist
+sudo cp mirrorlist mirrorlist.bak
+sudo truncate -s 0 mirrorlist
+ls -l
+  0 mirrorlist
+sudo vi mirrorlist
+  uncomment Server
+sudo pacman -Syyy
+```
+
+
+## Getting Started with Arch Linux 09 - Basic Security - YouTube d
+
+```txt
+sudo pacman -S net-tools
+which netstat
+netstat -tulpn
+sudo netstat -tulpn
+
+sudo systemctl stop sshd
+sudo systemctl disable sshd
+sudo netstat -tulpn
+
+
+sudo pacman -S arch-audit
+which arch-audit
+arch-audit
+  CVE-2018-20685
+chrome
+  CVE-2018-20685
+arch-audit --upgradable --quiet
+
+sudo pacman -Syu
+```
+

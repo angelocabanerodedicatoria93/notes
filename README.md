@@ -71,7 +71,7 @@ I want to learn ( 20m, 1hr, 4hrs)
   investor                     = 
   ideas                        = 
   gamer                        = 
-  anime                        = k one piece 438 done    133 how to cook curry
+  anime                        = k one piece 439 done    133 how to cook curry
   expenses                     = 
   physicist                    = 
   mathematician                = 
@@ -86,10 +86,10 @@ work, cashflow game, read a book if your not doing anything
 talk to god                               = 
 toothbrush, bath, drink water, clean, cr  = 
 #############################################   11 hours         07 - 18:00
-nap, meditate                20 minutes   = 
-exercise                     20 minutes   = 
-job, music, I want to learn               = 
-multitasking = writing, reading, speaking = 
+nap, meditate                20 minutes   = d
+exercise                     20 minutes   = d
+job, music, I want to learn               = d
+choose one = writing, reading, speaking   = 
 eat                                       = 
 #############################################   7 hours 30 mins  18 - 01:30
 nap, meditate                20 minutes   = 

@@ -1,8 +1,108 @@
 # arch
 
-## https://wiki.archlinux.org/index.php/Installation_guide
+## https://wiki.archlinux.org/index.php/Installation_guide d
 
 ```txt
+gpg --keyserver-options auto-key-retrieve --verify archlinux-version-x86_64.iso.sig
+pacman-key -v archlinux-version-x86_64.iso.sig
+
+
+keyboard
+ls /usr/share/kbd/keymaps/**/*.map.gz
+loadkeys de-latin1
+
+
+verify the boot mode
+ls /sys/firmware/efi/efivars
+
+
+connect to the internet
+ip link
+iwctl
+help
+device list
+station device scan
+station device get-networks
+station device connect SSID
+iwctl --passphrase passphrase station device connect SSID
+ping archlinux.org
+
+
+Update the system clock
+timedatectl set-ntp true
+timedatectl status
+
+
+Partition the disks
+lsblk
+fdisk -l
+
+
+Format the partitions
+mkfs.ext4 /dev/root_partition
+mkswap /dev/swap_partition
+swapon /dev/swap_partition
+
+
+Mount the file systems
+mount /dev/root_partition /mnt
+
+
+Select the mirrors
+/etc/pacman.d/mirrorlist
+
+
+Install essential packages
+pacstrap /mnt base linux linux-firmware
+
+
+Fstab
+genfstab -U /mnt >> /mnt/etc/fstab
+/mnt/etc/fstab
+
+
+Chroot
+arch-chroot /mnt
+
+
+Time zone
+ln -sf /usr/share/zoneinfo/Region/City /etc/localtime
+hwclock --systohc
+
+
+Localization
+vi /etc/locale.gen
+  en_US.UTF-8 UTF-8
+locale-gen
+vi /etc/locale.conf
+  LANG=en_US.UTF-8
+
+
+Network configuration
+vi /etc/hostname
+  myhostname
+
+vi /etc/hosts
+  127.0.0.1	localhost
+  ::1		localhost
+  127.0.1.1	myhostname.localdomain	myhostname
+
+
+Initramfs
+mkinitcpio -P
+
+
+Root password
+passwd
+
+
+Boot loader
+
+
+Reboot
+exit
+umount -R /mnt
+reboot
 ```
 
 ## Full Arch Linux Install (SAVAGE Edition!) - YouTube
@@ -969,5 +1069,21 @@ git clone https://aur.archlinux.org/yay.git
 cd yay/
 makepkg -si PKGBUILD
 yay -S
+```
+
+## Getting Started with Arch Linux 05 - The sudo Command - YouTube d
+
+```txt
+sudo pacman -Syyy
+  jay is not in the sudoers file. This incident will be reported.
+
+
+su
+visudo
+  root ALL=(ALL) ALL
+  %wheel ALL=(ALL) ALL
+
+sudo ls
+sudo pacman -Syyy
 ```
 
